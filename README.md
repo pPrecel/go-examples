@@ -15,6 +15,6 @@ Client logs:
 [･‿･]  rpc-test main ✓ go run cmd/client/main.go 
 INFO[0000] 5 + 20 = 25
 INFO[0000] Duration: -82.318µs
-INFO[0000] 5 + 20 = 0
+INFO[0000] 5 + 20 = 25
 INFO[0000] Duration: -4.330407ms
 ```

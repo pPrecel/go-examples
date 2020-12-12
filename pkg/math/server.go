@@ -13,10 +13,9 @@ type Server int
 
 func (rs *Server) Plus(r Request, res *int) error {
 	log.Printf("Request A: %d, B: %d", r.A, r.B)
-	result := r.A + r.B
-	res = &result
+	*res = r.A + r.B
 
-	log.Printf("Result: %d", result)
+	log.Printf("Result: %d", *res)
 	return nil
 }
 
