@@ -1,4 +1,4 @@
-module github.com/pPrecel/rpc-test
+module github.com/pPrecel/go-examples/rpc
 
 go 1.14
 
