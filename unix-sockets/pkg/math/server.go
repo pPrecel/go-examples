@@ -5,6 +5,11 @@ import (
 	"net/rpc"
 )
 
+const (
+	Address = "/tmp/sample.sock"
+	Network = "unix"
+)
+
 type Request struct {
 	A, B int
 }
@@ -20,23 +25,7 @@ func (rs *Server) Plus(r Request, res *int) error {
 }
 
 func Plus(a,b int) (int, error){
-	client, err := rpc.DialHTTP("tcp", "localhost:1234")
-	if err != nil {
-		return 0, err
-	}
-
-	var reply int
-	err = client.Call("Server.Plus", Request{A: a, B:b}, &reply)
-	return reply, err
-}
-
-const (
-	Address = "/tmp/sample.sock"
-	Network = "unix"
-)
-
-func PlusViaSocket(a,b int) (int, error){
-	client, err := rpc.DialHTTP("unix", "")
+	client, err := rpc.DialHTTP(Network, Address)
 	if err != nil {
 		return 0, err
 	}

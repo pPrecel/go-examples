@@ -1,13 +1,12 @@
-# rpc-test
+# first implementation of rpc as a library
 
 Server logs:
 
 ```bash
 [･‿･]  go-examples/rpc main ✗ go run cmd/server/main.go
-INFO[0000] Listen: localhost:1234
-INFO[0000] Serve...
-INFO[0006] Request A: 5, B: 20
-INFO[0006] Result: 25
+INFO[0000] Listen and serve :1234...
+INFO[0004] Request A: 5, B: 20
+INFO[0004] Result: 25
 ```
 
 Client logs:
