@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	portsFlagName="port"
+	portsFlagName="ports"
 	addressFlagName="address"
 	workersFlagName="workers"
 	defaultPorts="1-1024"
@@ -34,7 +34,7 @@ func main() {
 	}
 
 	log.Printf("Scanning ports: %s, on address: %s...", *ports, *address)
-	targetPorts, err := parse.ParseRangeToInt(*ports)
+	targetPorts, err := parse.Range(*ports)
 	if err != nil {
 		log.Panic(err)
 	}

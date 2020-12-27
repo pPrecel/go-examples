@@ -11,7 +11,7 @@ const (
 	rangeSeparator = "-"
 )
 
-func ParseRangeToInt(input string) ([]int, error) {
+func Range(input string) ([]int, error) {
 	sepVal := strings.Split(input, portSeparator)
 	var newRange []int
 
