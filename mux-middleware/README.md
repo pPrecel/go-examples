@@ -2,14 +2,14 @@
 
 1. Start server
 ```bash
-[･‿･]  go-examples/mux-middlewar main ✗ go run cmd/server/main.go     23:03:52
+[･‿･]  go-examples/mux-middleware main ✗ go run cmd/server/main.go     23:03:52
 INFO[0000] Starting server...
 INFO[0000] Listen And Serve...
 ```
 
 2. Use curl or other tool to rich server
 ```bash
-[･‿･]  go-examples/mux-middlewar main ✗ curl "localhost:8080/hello?pass=1234&user=admin"
+[･‿･]  go-examples/mux-middleware main ✗ curl "localhost:8080/hello?pass=1234&user=admin"
 looks ok :
 ```
 
@@ -17,7 +17,7 @@ looks ok :
 
 3. Example server logs
 ```bash
-[･‿･]  go-examples/mux-middlewar main ✗ go run cmd/server/main.go     23:03:52
+[･‿･]  go-examples/mux-middleware main ✗ go run cmd/server/main.go     23:03:52
 INFO[0000] Starting server...
 INFO[0000] Listen And Serve...
 INFO[0021] Hello from AuthHandler
