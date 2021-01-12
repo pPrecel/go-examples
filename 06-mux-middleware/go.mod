@@ -1,4 +1,4 @@
-module github.com/pPrecel/go-examples/mux-middleware
+module github.com/pPrecel/go-examples/06-mux-middleware
 
 go 1.14
 

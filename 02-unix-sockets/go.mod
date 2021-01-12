@@ -1,4 +1,4 @@
-module github.com/pPrecel/go-examples/unix-sockets
+module github.com/pPrecel/go-examples/02-unix-sockets
 
 go 1.14
 

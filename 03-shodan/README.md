@@ -1,7 +1,7 @@
 ### shodan
 
 ```bash
-[･‿･]  go-examples/shodan main ✗ go run cmd/main.go printer
+[･‿･]  go-examples/03-shodan main ✗ go run cmd/main.go printer
 Starting with token: CYAJ...
 Client info:
 Plan: oss

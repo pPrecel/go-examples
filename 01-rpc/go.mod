@@ -1,4 +1,4 @@
-module github.com/pPrecel/go-examples/port-scanner
+module github.com/pPrecel/go-examples/01-rpc
 
 go 1.14
 

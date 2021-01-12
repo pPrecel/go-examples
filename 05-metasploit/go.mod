@@ -1,4 +1,4 @@
-module github.com/pPrecel/go-examples/metasploit
+module github.com/pPrecel/go-examples/05-metasploit
 
 go 1.14
 

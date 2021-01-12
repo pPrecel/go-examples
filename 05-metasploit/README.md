@@ -2,7 +2,7 @@
 
 1. run server
 ```bash
-[ಠ_ಠ]  go-examples/shodan main ✗ msfconsole
+[ಠ_ಠ]  go-examples/05-shodan main ✗ msfconsole
 <...>
 
 msf6 > load msgrpc
@@ -15,11 +15,11 @@ msf6 > load msgrpc
 2. in other teminal
 
 ```bash
-[･‿･]  go-examples/metasploit main ✗ export METASPLOIT_SERVER_HOST=127.0.0.1:55552
-[･‿･]  go-examples/metasploit main ✗ export METASPLOIT_SERVER_USERNAME=msf
-[･‿･]  go-examples/metasploit main ✗ export METASPLOIT_SERVER_PASSWORD=<generated_password>
+[･‿･]  go-examples/05-metasploit main ✗ export METASPLOIT_SERVER_HOST=127.0.0.1:55552
+[･‿･]  go-examples/05-metasploit main ✗ export METASPLOIT_SERVER_USERNAME=msf
+[･‿･]  go-examples/05-metasploit main ✗ export METASPLOIT_SERVER_PASSWORD=<generated_password>
 
-[･‿･]  go-examples/metasploit main ✗ go run cmd/main.go
+[･‿･]  go-examples/05-metasploit main ✗ go run cmd/main.go
 INFO[0000] Read configuration...
 INFO[0000] Connecting...
 INFO[0000] List session...
