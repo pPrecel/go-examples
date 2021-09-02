@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "github.com/pPrecel/go-examples/07-grpc/internal/grpc";
+
+service HelloService {
+    rpc GetValue(Value) returns (Value) {}
+    rpc StreamToValue(stream Value) returns (Value) {}
+    rpc ValueToStream(Value) returns (stream Value) {}
+    rpc StreamToStream(stream Value) returns (stream Value) {}
+ }
+
+message Value {
+    int32 val = 1;
+    string name = 2;
+}
+  
