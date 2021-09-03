@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/pPrecel/go-examples/shodan/pkg/shodan"
 	"os"
+
+	"github.com/pPrecel/go-examples/shodan/pkg/shodan"
 )
 
 const (

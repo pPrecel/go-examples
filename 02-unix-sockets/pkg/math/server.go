@@ -1,8 +1,9 @@
 package math
 
 import (
-	log "github.com/sirupsen/logrus"
 	"net/rpc"
+
+	log "github.com/sirupsen/logrus"
 )
 
 const (
@@ -24,13 +25,13 @@ func (rs *Server) Plus(r Request, res *int) error {
 	return nil
 }
 
-func Plus(a,b int) (int, error){
+func Plus(a, b int) (int, error) {
 	client, err := rpc.DialHTTP(Network, Address)
 	if err != nil {
 		return 0, err
 	}
 
 	var reply int
-	err = client.Call("Server.Plus", Request{A: a, B:b}, &reply)
+	err = client.Call("Server.Plus", Request{A: a, B: b}, &reply)
 	return reply, err
 }

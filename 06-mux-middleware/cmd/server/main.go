@@ -2,9 +2,10 @@ package main
 
 import (
 	"context"
+	"net/http"
+
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/negroni"
-	"net/http"
 )
 
 const (

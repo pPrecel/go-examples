@@ -3,19 +3,20 @@ package main
 import (
 	"flag"
 	"fmt"
+	"net"
+
 	"github.com/pPrecel/go-examples/port-scanner/pkg/parse"
 	log "github.com/sirupsen/logrus"
-	"net"
 )
 
 const (
-	portsFlagName="ports"
-	addressFlagName="address"
-	workersFlagName="workers"
-	defaultPorts="1-1024"
-	defaultAddress="scanme.nmap.org"
-	defaultWorkers=100
-	targetAddressFormat="%s:%d"
+	portsFlagName       = "ports"
+	addressFlagName     = "address"
+	workersFlagName     = "workers"
+	defaultPorts        = "1-1024"
+	defaultAddress      = "scanme.nmap.org"
+	defaultWorkers      = 100
+	targetAddressFormat = "%s:%d"
 )
 
 func main() {
@@ -39,14 +40,14 @@ func main() {
 		log.Panic(err)
 	}
 
-	go func(targetPorts  []int) {
+	go func(targetPorts []int) {
 		for _, port := range targetPorts {
-			portsChan<-port
+			portsChan <- port
 		}
 	}(targetPorts)
 
 	for _ = range targetPorts {
-		port:=<-resultChan
+		port := <-resultChan
 		if port == 0 {
 			continue
 		}
@@ -63,10 +64,10 @@ func runWorker(address string, ports, result chan int) {
 	for port := range ports {
 		conn, err := net.Dial("tcp", fmt.Sprintf(targetAddressFormat, address, port))
 		if err != nil {
-			result<-0
+			result <- 0
 		} else {
 			conn.Close()
-			result<-port
+			result <- port
 		}
 	}
 }

@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/pPrecel/go-examples/rpc/pkg/math"
-	log "github.com/sirupsen/logrus"
 	"net/http"
 	"net/rpc"
+
+	"github.com/pPrecel/go-examples/rpc/pkg/math"
+	log "github.com/sirupsen/logrus"
 )
 
 const address = ":1234"

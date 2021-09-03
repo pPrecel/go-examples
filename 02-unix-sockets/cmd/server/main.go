@@ -1,12 +1,13 @@
 package main
 
 import (
-	"github.com/pPrecel/go-examples/unix-sockets/pkg/math"
-	log "github.com/sirupsen/logrus"
 	"net"
 	"net/http"
 	"net/rpc"
 	"os"
+
+	"github.com/pPrecel/go-examples/unix-sockets/pkg/math"
+	log "github.com/sirupsen/logrus"
 )
 
 func main() {

@@ -1,8 +1,9 @@
 package math
 
 import (
-	log "github.com/sirupsen/logrus"
 	"net/rpc"
+
+	log "github.com/sirupsen/logrus"
 )
 
 type Request struct {
@@ -19,14 +20,14 @@ func (rs *Server) Plus(r Request, res *int) error {
 	return nil
 }
 
-func Plus(a,b int) (int, error){
+func Plus(a, b int) (int, error) {
 	client, err := rpc.DialHTTP("tcp", "localhost:1234")
 	if err != nil {
 		return 0, err
 	}
 
 	var reply int
-	err = client.Call("Server.Plus", Request{A: a, B:b}, &reply)
+	err = client.Call("Server.Plus", Request{A: a, B: b}, &reply)
 	return reply, err
 }
 
@@ -35,13 +36,13 @@ const (
 	Network = "unix"
 )
 
-func PlusViaSocket(a,b int) (int, error){
+func PlusViaSocket(a, b int) (int, error) {
 	client, err := rpc.DialHTTP("unix", "")
 	if err != nil {
 		return 0, err
 	}
 
 	var reply int
-	err = client.Call("Server.Plus", Request{A: a, B:b}, &reply)
+	err = client.Call("Server.Plus", Request{A: a, B: b}, &reply)
 	return reply, err
 }
